@@ -1,6 +1,6 @@
 # Software-Engineering
-Project Name: Preformence Tracker
-Description:
+Project Name: Preformence Tracker</br>
+Description:</br>
 Table of Contents:
 Installation:
 Usage:
