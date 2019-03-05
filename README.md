@@ -1,7 +1,7 @@
 # Software-Engineering
 Project Name: Preformence Tracker</br>
-Description:</br>
-Table of Contents:
-Installation:
-Usage:
-Contributing:
+<h2>Description:</br><h2>
+Table of Contents:<br>
+Installation:<br>
+Usage:<br>
+Contributing:<br>
