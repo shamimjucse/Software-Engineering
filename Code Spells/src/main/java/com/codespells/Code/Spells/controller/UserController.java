@@ -16,6 +16,10 @@ public class UserController {
     @Autowired
     UserServices userServices;
 
+    /**
+     * controller for login
+     * @return
+     */
     @RequestMapping(value = "/login",method = RequestMethod.GET)
     public ModelAndView userLogin(){
         ModelAndView modelAndView = new ModelAndView("UserLoginPage");
@@ -24,6 +28,11 @@ public class UserController {
         return modelAndView;
     }
 
+    /**
+     * for authentication login
+     * @param user
+     * @return
+     */
     @RequestMapping(value = "/home", method = RequestMethod.POST)
     public ModelAndView authenticationLogin(@ModelAttribute("userForm") User user){
         User requestedUser = userServices.getByEmail(user.getEmail());
