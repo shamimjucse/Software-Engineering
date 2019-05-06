@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:background-color="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Show</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/Home.css}">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <style>
+       .button {
+           background-color: #4CAF50; /* Green */
+           border: none;
+           color: white;
+           padding: 15px 15px;
+           text-align: center;
+           text-decoration: none;
+           display: inline-block;
+           font-size: 16px;
+           margin: 20px 10px;
+           cursor: pointer;
+       }
+       .button2 {background-color: #008CBA;}
+
+   </style>
+</head>
+<body>
+
+<div class="card card-container">
+    <form class="form" th:action="@{/add}" method="get" >
+        <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Add New User</button>
+    </form>
+    <form class="form" th:action="@{/dashboard}" method="get" >
+        <button class="btn btn-lg btn-block btn-signin" < type="submit">Home</button>
+    </form>
+</div>
+
+</body>
+</html>
