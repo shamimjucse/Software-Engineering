@@ -16,6 +16,15 @@ public class User implements Serializable {
 
     private String password;
 
+    public User(String email, String password) {
+        this.email = email;
+        this.password = password;
+    }
+    public User() {
+
+    }
+
+
     public Integer getId() {
         return id;
     }
@@ -39,6 +48,7 @@ public class User implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
+
 
     @Override
     public String toString() {
