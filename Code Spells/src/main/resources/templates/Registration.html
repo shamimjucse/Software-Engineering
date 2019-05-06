@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add User</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+
+<form th:action="@{/save}" method="post" >
+    <h1> <font color="blue">Welcome to Codespell</font></h1>
+    <h2>Registration Form</h2>
+    <p>Sign up into CodeSpell</p>
+    <hr>
+    <div class="form-group">
+        <label for="userName">User Name: </label>
+        <input type="text" class="form-control" id="username" th:field="${user.userName}">
+    </div>
+    <div class="form-group">
+        <label for="email">Email: </label>
+        <input type="text" class="form-control" id="email" th:field="${user.email}">
+    </div>
+    <div class="form-group">
+        <label for="password">Password: </label>
+        <input type="text" class="form-control" id="password" th:field="${user.password}">
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn btn-success" value="SUBMIT">
+        <input type="reset"  class="btn btn-primary" value="CLEAR">
+    </div>
+    <div class="container signin">
+        <p>Already registered? <a href="#" th:href="@{/login}"><font color="Red">LogIn</font></a>.</p>
+    </div>
+</form>
+
+</body>
+</html>
