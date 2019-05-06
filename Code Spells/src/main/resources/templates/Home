@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/Home.css}">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <style>
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .button2 {background-color: #008CBA;}
+        .button3 {background-color: #f44336;}
+        .button4 {background-color: #555555;}
+    </style>
+</head>
+<body>
+<div class="container class="wrapper">
+<main class="col-xs-12 col-sm-8 col-lg-9 col-xl-10 pt-3 pl-4 ml-auto">
+    <header class="page-header row justify-center">
+        <div class="col-md-6 col-lg-8">
+            <h1 class="float-left text-center text-md-left">Code Spell</h1>
+        </div>
+        <div class="dropdown user-dropdown col-md-6 col-lg-4 text-center text-md-right"><a
+                class="btn btn-stripped dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+            <img th:src="/Asset/images/Zahid-sir.jpg}" alt="profile photo"
+                 class="circle float-left profile-photo" width="50" height="auto">
+            <div class="username mt-1">
+                <h4 class="mb-1">User name</h4>
+            </div>
+        </a>
+            <div class="dropdown-menu dropdown-menu-right" style="margin-right: 1.5rem;"
+                 aria-labelledby="dropdownMenuLink"><a class="dropdown-item" href="#"><em
+                    class="fa fa-user-circle mr-1"></em> View Profile</a>
+                <a class="dropdown-item"><em class="fa fa-power-off mr-1"></em>Logout</a>
+            </div>
+        </div>
+    </header>
+</main>
+<div class="card card-container">
+    <h2 class="moveit" align="center"><font color="Grenn"><i>Home</i></font></h2>
+    <p id="profile-name" class="profile-name-card">You are currently in the home page</p>
+    <form class="form-signin" th:action="@{/home}" method="post" th:object="${userForm}">
+        <button class="button button2" onclick="">Create Course</button>
+        <button class="button button" onclick="">Enroll Courses</button>
+        <button class="button button3" onclick="">See available courses</button>
+        <button class="button button4" onclick="">Already enrolled courses</button>
+        <p>Want to logout?</p>
+        <button class="btn btn-lg btn-primary btn-block btn-logout" color="Red" type="submit">Log out</button>
+
+    </form>
+</div>
+</div>
+</body>
+</html>
