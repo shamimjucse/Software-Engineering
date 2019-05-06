@@ -24,10 +24,12 @@
 
             <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Create Course</button>
         </form>
-        <a href="#" th:href="@{/home}" class="forgot-password">
-            Go to Homepage
-        </a>
+
     </div>
+    <form class="form" th:action="@{/dashboard}">
+        <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Go Home</button>
+    </form>
+
 </div>
 </body>
 </html>

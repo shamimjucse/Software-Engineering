@@ -25,9 +25,10 @@ public class CourseController {
     public ModelAndView createCourse(){
         ModelAndView modelAndView = new ModelAndView("CreateCourse");
         modelAndView.addObject("courseForm",new Course());
-
         return modelAndView;
     }
+
+
 
 
     /**
@@ -37,22 +38,17 @@ public class CourseController {
      */
     @RequestMapping(value = "/addCourse", method = RequestMethod.POST)
     public ModelAndView addCourse(@ModelAttribute("courseForm") Course course) {
-        Course requestedCourse = courseServices.getByName(course.getName());
-
-        if (requestedCourse == null) {
-            return new ModelAndView("redirect:/home");
-        } else {
-
-            return new ModelAndView("redirect:/availableCourse");
-
-        }
+        courseServices.saveOrUpdateCourse(course);
+        return new ModelAndView("redirect:/dashboard");
     }
 
 
-    @GetMapping(value = "/availableCourse")
+    @RequestMapping(value = "/availableCourse", method = RequestMethod.POST)
     public ModelAndView availableCourse() {
 
-        return new ModelAndView("Home");
+        ModelAndView modelAndView = new ModelAndView("AvailableCourse");
+
+        return modelAndView;
     }
 
 }
