@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Set_Problem</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/SetProblem.css}">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="card card-container">
+        <h1 class="moveit">Code Spells</h1>
+        <h2 class="moveit">Set Problem</h2>
+        <p id="profile-name" class="profile-name-card"></p>
+        <form class="form-signin" th:action="@{/home}" method="post" th:object="${userForm}">
+            <input type="text" id="inputProblemName" class="form-control" th:field="*{ProblemName}" placeholder="ProblemName" required>
+            <input type="text"  id="inputDescription" class="form-control" th:field="*{Description}" placeholder="Problem details here......" required>
+            <input type="text" id="inputInputFile" class="form-control" th:field="*{InputFile}" placeholder="InputFile" required>
+            <input type="text" id="inputOutputFile" class="form-control" th:field="*{OutputFile}" placeholder="OutputFile" required>
+
+            <button class="btn btn-lg btn-primary btn-block btn-submit" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
