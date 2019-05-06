@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>AddNewuser</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/Home.css}">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <style>
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .button2 {background-color: #008CBA;}
+
+    </style>
+</head>
+<body>
+<div class="card card-container">
+    <h2 class="moveit" align="center"><font color="Grenn"><i>Add New User</i></font></h2>
+
+        <button class="button button2" onclick="">Add New User</button>
+        <button class="button button" onclick="">Home</button>
+
+
+
+</div>
+</body>
+</html>
