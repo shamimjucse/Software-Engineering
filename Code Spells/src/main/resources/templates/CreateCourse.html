@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="card card-container">
+
+        <h1 class="moveit">Code Spells</h1>
+        <h2 class="moveit">Create Course</h2>
+        <p id="profile-name" class="profile-name-card"></p>
+        <form class="form" th:action="@{/addCourse}" method="post" >
+
+            <input type="text" id="courseName" class="form-control" th:field="${courseForm.name}" placeholder="Course Name" required autofocus>
+            <input type="text" id="courseStart" class="form-control" th:field="${courseForm.courseStartDate}" placeholder="Course Start date" required>
+            <input type="text" id="courseEnd" class="form-control" th:field="${courseForm.courseEndDate}" placeholder="Course End date" required>
+            <input type="text" id="courseFee" class="form-control" th:field="${courseForm.courseFee}" placeholder="Course Fee" required>
+
+            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Create Course</button>
+        </form>
+        <a href="#" th:href="@{/home}" class="forgot-password">
+            Go to Homepage
+        </a>
+    </div>
+</div>
+</body>
+</html>
